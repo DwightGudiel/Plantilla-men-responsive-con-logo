@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú responsivo con logo y usuario usando metodología BEM</title>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__content container">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logo__img" src="img/logoPrincipal.png" alt="Logo de página">
+                </a>
+            </div>
+
+            <div class="mobil-menu">
+                <img src="img/barras.svg" alt="icono barra de navegación">
+            </div>
+
+            <nav class="navbar">
+                <a class="navbar__link" href="home">Home</a>
+                <a class="navbar__link" href="about">About us</a>
+                <a class="navbar__link" href="about">Products</a>
+                <a class="navbar__link" href="login">Login</a>
+            </nav>
+
+            <div class="perfil">
+                <div class="perfil__img">
+                    <img src="img/perfil.jpg" alt="perfil">
+                </div>
+                <div class="perfil__name">
+                    <p>User Name</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

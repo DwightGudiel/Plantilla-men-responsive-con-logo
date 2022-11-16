@@ -1,0 +1,219 @@
+/* estilos personalizados */
+:root {
+    --primary: #483D8B;
+    --secundary: #FFCE00;
+    --secundary-Dark: rgb(233, 287, 2);
+    --white: #FFF;
+    --black: #0F2027;
+    --text-White: #fff;
+}
+
+/* normalización */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+
+
+/* Para usar mejor box model */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Estilos generales */
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--colorletra);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--text-White);
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(120rem, 90%);
+    margin: 0rem auto;
+}
+
+/*====================================================
+            Estilos a la navegación 
+ ======================================================
+ */
+
+.header {
+    background-color: var(--black);
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .header__content {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    order: 1;
+}
+
+.logo .logo__img {
+    border-radius: 50%;
+    width: 7rem;
+}
+
+@media (min-width: 769px) {
+    .logo {
+        order: 1
+    }
+}
+
+@media (min-width: 768px) {
+    .logo {
+        justify-content: start;
+    }
+}
+
+.navbar {
+
+    /* Estilos para la navegación responsiva */
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+
+
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+}
+
+.navbar .navbar__link {
+    color: var(--text-White);
+    text-align: center;
+    padding: 0.5rem 2rem;
+}
+
+.navbar .navbar__link:hover {
+    background-color: #483D8B;
+}
+
+
+@media (min-width: 768px) {
+    .navbar {
+        order: 2;
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    .navbar {
+        margin-top: 0rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    order: -1;
+}
+
+.perfil__img img {
+    margin-right: 1rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+
+@media (min-width: 768px) {
+    .perfil {
+        align-items: center;
+        order: 3;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .perfil__img img {
+        margin-left: 0rem;
+    }
+}
+
+.perfil__name p {
+    color: var(--text-White);
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobil-menu img {
+    width: 4rem;
+}
+
+
+@media (min-width: 768px) {
+    .mobil-menu {
+        display: none;
+    }
+}
+
+/*Clase que se añade a la barra de navegación cuando se hace clic en el botón del menú. Hace que la barra de navegación sea visible. */
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    /* toma el alto que necesita */
+    height: auto;
+}
